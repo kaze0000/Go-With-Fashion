@@ -1,6 +1,6 @@
-# [submodule "api"]
-#  path = api
-#  url = https://github.com/kaze0000/rails7-nextjs-mysql-docker-api.git
-# [submodule "front"]
-#  path = front
-#  url = https://github.com/kaze0000/rails7-nextjs-mysql-docker-front.git
+[submodule "api"]
+ path = api
+ url = https://github.com/kaze0000/rails7-nextjs-mysql-docker-api.git
+[submodule "front"]
+ path = front
+ url = https://github.com/kaze0000/rails7-nextjs-mysql-docker-front.git

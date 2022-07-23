@@ -32,6 +32,6 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./front/app:/usr/src/app
-    command: "npm run dev"
+    command: "yarn start"
     ports:
       - "8000:3000"
