@@ -1,0 +1,37 @@
+# https://qiita.com/croquette0212/items/7b99d9339fd773ddf20b
+# https://qiita.com/ren0826jam/items/ddd69ecd59400216a2e6
+version: "3.7"
+
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: root
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./tmp/db:/var/lib/mysql
+
+  api:
+    tty: true
+    depends_on:
+      - db
+    build:
+      context: ./api/
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    volumes:
+      - ./api:/app
+    command: bundle exec rails server -b 0.0.0.0
+
+  front:
+    build:
+      context: ./front/
+      dockerfile: Dockerfile
+    volumes:
+      - ./front/app:/usr/src/app
+    command: "yarn dev"
+    ports:
+      - "8000:3000"
