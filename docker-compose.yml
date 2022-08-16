@@ -37,6 +37,6 @@ services:
         REACT_APP_SERVER_URL: $REACT_APP_SERVER_URL
     volumes:
       - ./front/app:/usr/src/app
-    command: "yarn start"
+    command: "npm start"
     ports:
       - "8000:3000"
