@@ -18,3 +18,16 @@
 ## ER 図
 
 <img src="https://i.gyazo.com/61bb09a9566356e0a9556006cf2fb979.png">
+
+## 起動
+`git clone --recursive https://github.com/kaze0000/Go-With-Fashion.git`
+
+`dokcer-compose build`
+
+`dokcer-compose up`
+
+`docker-compose exec api rails db:create`
+
+`docker-compose exec api rails db:migrate`
+
+`docker-compose exec api rails db:seed`
