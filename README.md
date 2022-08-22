@@ -22,9 +22,9 @@
 ## 起動
 `git clone --recursive https://github.com/kaze0000/Go-With-Fashion.git`
 
-`dokcer-compose build`
+`docker-compose build`
 
-`dokcer-compose up`
+`docker-compose up`
 
 `docker-compose exec api rails db:create`
 
