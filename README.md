@@ -31,3 +31,5 @@
 `docker-compose exec api rails db:migrate`
 
 `docker-compose exec api rails db:seed`
+
+` docker-compose exec front npm i typescript`
